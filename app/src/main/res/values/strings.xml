@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BitcoinWallet</string>
+    <string name="hello_w_miner">Hello w.. Miner!</string>
+</resources>
