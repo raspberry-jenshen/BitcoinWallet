@@ -10,11 +10,12 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    private val apiManager: ApiManager = ApiManager()
+    private lateinit var apiManager: ApiManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        apiManager = ApiManager(this)
         imageView.setOnClickListener { startActivity(Intent(this, WalletActivity::class.java)) }
         login.setOnClickListener {
             if (doLogin(password.text.toString(), email.text.toString())) {
